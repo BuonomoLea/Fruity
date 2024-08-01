@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    overflow: hidden;
+    font-family: "Nunito", sans-serif;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.containerSlides {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.burgerSVG {
+    position: absolute;
+    display: flex;
+    top: 3vh;
+    right: 3vw;
+    z-index: 334;
+    cursor: pointer;
+}
+.burgerContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 333;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 3vh 0;
+    display: none;
+}
+    .burgerUl {
+        margin: 3vh 0;
+        padding: 0 1rem;
+    }
+        .burgerLi {
+            padding-bottom: 1.5rem;
+            margin: 2rem;
+            text-transform: uppercase;
+            border-bottom: 1px solid black;
+            cursor: pointer;
+            transition: all .3s ease;
+        }
+        .burgerLi:last-child {
+            border-bottom: none;
+        }
+
+        .burgerLi:hover {
+            transform: scale(1.05);
+            border-bottom: 1px solid #000000a9;
+        }
+        .burgerLi:last-child:hover {
+            border-bottom: none;
+        }
+
+.container, .container2, .container3, .container4, .container5 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid:
+        "header" 10%
+        "main" 90%
+        / 1fr; 
+}
+.container {
+    background-color: #ffa9ba;
+}
+.container2 {
+    background-color: #c7ffa9;
+}
+.container3 {
+    background-color: #fff652e9;
+}
+.container4 {
+    background-color: #d8bfd8;
+}
+.container5 {
+    background-color: #98b8fa;
+}
+
+.header {
+    width: 100%;
+    height: 100%;
+    grid-area: header;
+    display: grid;
+    grid:
+        "div-logo div-menu" 1fr
+        / 60% 40%;
+}
+.div-logo {
+    width: 100%;
+    height: 100%;
+    grid-area: div-logo;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+    .logo {
+        padding-left: 2rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+.div-menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: div-menu;
+    padding-right: 8vw;
+}
+    .ul {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+        .li {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        .line::after {
+            position: absolute;
+            content: '';
+            top: 70%;
+            left: 25%;
+            width: 0%;
+            height: 1.5px;
+            background: #060606;
+            transition: width 200ms linear;
+        }
+        .line:hover::after {
+            width: 50%;
+        }
+.main {
+    width: 100%;
+    height: 100%;
+    grid-area: main;
+    display: grid;
+    grid:
+        "left right" 1fr
+        / 60% 40%;
+}
+.left {
+    width: 100%;
+    height: 100%;
+    grid-area: left;
+    display: grid;
+    grid:
+        "div-titre" 40%
+        "div-paragraphe" 25%
+        "div-bouton" 35%
+        / 1fr;
+}
+.div-titre {
+    width: 100%;
+    height: 100%;
+    grid-area: div-titre;
+    display: flex;
+    justify-content: left;
+    align-items: end;
+    padding: 2% 20%;
+}
+    .h1 {
+        font-size: 6rem;
+    }
+.div-paragraphe {
+    width: 100%;
+    height: 100%;
+    grid-area: div-paragraphe;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 0rem 20%;
+}
+    .paragraphe {
+        font-size: 1.8rem;
+    }
+.div-bouton {
+    width: 100%;
+    height: 100%;
+    grid-area: div-bouton;
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    padding: 0rem 20%;
+}
+    .btnAcheter {
+        position: relative;
+        text-align: center;
+        width: 40%;
+        height: 20%;
+        font-size: 1.15rem;
+        cursor: pointer;
+        background-color: transparent;
+        border: 1px solid #060606;
+        z-index: 2;
+    }
+    .btnAcheter::before {
+        position: absolute;
+        content: '';
+        top: 0%;
+        left: 0%;
+        width: 0%;
+        height: 100%;
+        background-color: #060606;
+        transition: all 200ms linear;
+        z-index: -1;
+    }
+    .btnAcheter:hover {
+        color: #efeaea;
+    } 
+    .btnAcheter:hover::before {
+        width: 100%;
+    } 
+.right {
+    width: 100%;
+    height: 100%;
+    grid-area: right;
+    display: grid;
+    grid:
+        "div-imageFruit btnslide" 1fr
+        / 80% 20%;
+}
+.div-imageFruit {
+    width: 100%;
+    height: 100%;
+    grid-area: div-imageFruit;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+    .imageFruit {
+        width: 100%;
+        height: 75%;
+    }
+
+
+.btnslide {
+    position: absolute;
+    top: 35%;
+    right: 3%;
+    text-align: right;
+    
+}
+    .dot {
+        -webkit-forced-color-adjust: none;
+        -moz-forced-color-adjust: none;
+        -ms-forced-color-adjust: none;
+        -o-forced-color-adjust: none;
+        forced-color-adjust: none;
+        cursor: pointer;
+        height: 25px;
+        width: 25px;
+        background-color: #ef819a;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        margin: 4vh 1rem;
+        transition: background-color 0.6s ease;
+    }
+    .dot:first-child {
+        background-color: #e95f7f;
+    }
+    .dot.active {
+        background-color: #ef819a;
+    }
+      .slides {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none; /* Cacher toutes les slides par défaut */
+      }
+      
+      .slides:first-child {
+        display: block; /* Afficher la première slide par défaut */
+      }
+
+      .colorTest {
+        background-color: #4f86f7;
+      }
