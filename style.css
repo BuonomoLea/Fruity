@@ -9,6 +9,10 @@
     overflow: hidden;
     font-family: "Nunito", sans-serif;
 }
+a {
+    text-decoration: none;
+    color: #060606;
+}
 body {
     width: 100vw;
     height: 100vh;
@@ -24,7 +28,6 @@ body {
     justify-content: space-around;
     align-items: center;
 }
-
 .burgerSVG {
     position: absolute;
     display: flex;
@@ -171,6 +174,84 @@ body {
         "left right" 1fr
         / 60% 40%;
 }
+/* -------- OTHERS ----------- */
+.main-others {
+    overflow-y: scroll;
+}
+.main-others {
+    --sb-track-color: #ffa9ba;
+    --sb-thumb-color: #060606;
+    --sb-size: 14px;
+}
+.main-others::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+.main-others::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+.main-others::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+}
+
+.main-others2 {
+    overflow-y: scroll;
+}
+.main-others2 {
+    --sb-track-color: #c7ffa9;
+    --sb-thumb-color: #060606;
+    --sb-size: 14px;
+}
+.main-others2::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+.main-others2::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+.main-others2::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+}
+
+.main-others3 {
+    overflow-y: scroll;
+}
+.main-others3 {
+    --sb-track-color: #98b8fa;
+    --sb-thumb-color: #060606;
+    --sb-size: 14px;
+}
+.main-others3::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+.main-others3::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+.main-others3::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+}
+@supports not selector(::-webkit-scrollbar) {
+  .main-others, .main-others2, .main-others3 {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    scrollbar-width: thin;
+  }
+}
+    .paragraphe-others {
+        font-size: 1.2rem;
+    }
+    .paragraphe-others h2 {
+        padding: 1rem 0;
+    }
+footer {
+    padding: 1rem;
+}
+    
+/* -------- END OTHERS ----------- */
+
 .left {
     width: 100%;
     height: 100%;

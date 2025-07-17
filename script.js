@@ -6,14 +6,12 @@ function currentSlide(slideIndex) {
     slides.forEach(function(slide, index) {
       slide.style.display = (index === slideIndex - 1) ? 'block' : 'none';
     });
-  
+    
     for (var i = 0; i < dots.length; i++) {
       dots[i].classList.remove('active');
       dots[i].style.backgroundColor = '';
     }
-  
     dots[slideIndex - 1].classList.add('active');
-
     if (slideIndex === 1) {
         dots[0].style.backgroundColor = '#e95f7f';
         dots[1].style.backgroundColor = '#ef819a';
@@ -62,13 +60,11 @@ function currentSlide(slideIndex) {
     }
 }
   
-  // Initialiser la première slide
-  currentSlide(1);
-  
+// Initialiser la première slide
+currentSlide(1);
 
 //Fonction pour ouvrir le menu au clic sur le burger et fermer si il est ouvert : 
 const burger = document.getElementById('burgerSVG');
-
 function openMenu() {
     let burgerContainer = document.getElementById('burgerContainer');
     let currentDisplay = window.getComputedStyle(burgerContainer).display;
@@ -82,12 +78,9 @@ function openMenu() {
         burgerContainer.style.display = 'flex';
         console.log('Setting display to flex'); // Ajouté pour débogage
     }
-
-
 }
 
 burger.addEventListener('click', openMenu);
-
 document.getElementById('menuAnchor').addEventListener('click', function(event) {
     event.preventDefault();
     console.log('Anchor clicked');
