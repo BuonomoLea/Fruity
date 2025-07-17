@@ -39,7 +39,7 @@ body {
     right: 0;
     width: 8vw;
     height: 100vh;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.8);
     z-index: 333;
     display: flex;
     flex-direction: column;
@@ -63,7 +63,6 @@ body {
         .burgerLi:last-child {
             border-bottom: none;
         }
-
         .burgerLi:hover {
             transform: scale(1.05);
             border-bottom: 1px solid #000000a9;
@@ -71,7 +70,6 @@ body {
         .burgerLi:last-child:hover {
             border-bottom: none;
         }
-
 .container, .container2, .container3, .container4, .container5 {
     position: absolute;
     top: 0;
@@ -99,7 +97,6 @@ body {
 .container5 {
     background-color: #98b8fa;
 }
-
 .header {
     width: 100%;
     height: 100%;
@@ -161,6 +158,10 @@ body {
         .line:hover::after {
             width: 50%;
         }
+
+        .anchor {
+            z-index: 999;
+        }
 .main {
     width: 100%;
     height: 100%;
@@ -192,6 +193,17 @@ body {
 }
     .h1 {
         font-size: 6rem;
+        animation: titleAnim 0.5s both;
+    }
+    @keyframes titleAnim {
+        0% {
+            transform: translateX(-1000px);
+            opacity: 0;
+          }
+          100% {
+            transform: translateX(0);
+            opacity: 1;
+          }
     }
 .div-paragraphe {
     width: 100%;
@@ -260,10 +272,9 @@ body {
     align-items: center;
 }
     .imageFruit {
-        width: 100%;
+        width: auto;
         height: 75%;
     }
-
 
 .btnslide {
     position: absolute;
@@ -302,11 +313,9 @@ body {
         height: 100%;
         display: none; /* Cacher toutes les slides par défaut */
       }
-      
       .slides:first-child {
         display: block; /* Afficher la première slide par défaut */
       }
-
       .colorTest {
         background-color: #4f86f7;
       }

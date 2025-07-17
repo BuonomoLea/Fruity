@@ -60,7 +60,7 @@ function currentSlide(slideIndex) {
         liMenu[1].style.color = '#0947c7';
         liMenu[2].style.color = '#0947c7';
     }
-  }
+}
   
   // Initialiser la première slide
   currentSlide(1);
@@ -87,3 +87,10 @@ function openMenu() {
 }
 
 burger.addEventListener('click', openMenu);
+
+document.getElementById('menuAnchor').addEventListener('click', function(event) {
+    event.preventDefault();
+    console.log('Anchor clicked');
+    currentSlide(1);
+    //A debuguer
+});
