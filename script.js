@@ -81,9 +81,9 @@ function openMenu() {
 }
 
 burger.addEventListener('click', openMenu);
-document.getElementById('menuAnchor').addEventListener('click', function(event) {
-    event.preventDefault();
-    console.log('Anchor clicked');
-    currentSlide(1);
-    //A debuguer
-});
+// document.getElementById('menuAnchor').addEventListener('click', function(event) {
+//     event.preventDefault();
+//     console.log('Anchor clicked');
+//     currentSlide(1);
+//     //A debuguer
+// });
