@@ -10,11 +10,11 @@ avec du HTML, CSS et JavaScript pur.
 
 ### Table des matières
 
-- [Démo en ligne](###démo-en-ligne)  
-- [Installation](###installation)  
-- [Utilisation](###utilisation)  
-- [Structure du projet](###structure-du-projet)  
-- [Licence](###licence)  
+- [Démo en ligne](#demo-en-ligne)  
+- [Installation](#installation)  
+- [Utilisation](#utilisation)  
+- [Structure du projet](#structure-du-projet)  
+- [Licence](#licence) 
 
 ### Démo en ligne
 
